@@ -11,6 +11,7 @@ open(my $EXPR, $inputFile) || die $!;
 
 my $header = <$EXPR>;
 while(my $line = <$EXPR>){
+	chomp($line);
 	my @lineArr = split(/\t/, $line);
 	
 	my $minExpr = 1000000000000;
